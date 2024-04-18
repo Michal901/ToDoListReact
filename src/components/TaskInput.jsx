@@ -73,7 +73,7 @@ export default function TaskInput({ taskArr, setTaskArr, setIsModalShown }) {
   };
   return (
     <InputContainer>
-      <StyledH1>Do zrobieniaa</StyledH1>
+      <StyledH1>Do zrobienia</StyledH1>
       {taskArr.length > 0 ? (
         <StyledP>
           Liczba zadań: <strong>{taskArr.length}</strong>{" "}
