@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+html {
+  background-color: #000213ea;
+}
+
+input {
+  width: 200px;
+}
+ul {
+  width: 90%;
+}
+.crossed {
+  text-decoration: line-through;
+}
