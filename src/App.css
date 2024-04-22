@@ -5,7 +5,11 @@
   list-style: none;
 }
 html {
-  background-color: #000213ea;
+  background: url("./assets/img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 input {
