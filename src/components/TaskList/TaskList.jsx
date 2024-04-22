@@ -1,26 +1,5 @@
 import PropTypes from "prop-types";
-import styled from "styled-components";
-
-const StyledItem = styled.li`
-  display: flex;
-  justify-content: space-between;
-  border-top: 1px solid black;
-  padding: 15px;
-  text-decoration: ${({ $done }) => ($done ? "line-through" : "none")};
-
-  button {
-    margin-left: 10px;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #007bff;
-    color: #fff;
-  }
-  p {
-    font-family: sans-serif;
-  }
-`;
+import styles from "../TaskList/TaskList.module.css";
 
 export default function TaskList({ taskArr, setTaskArr }) {
   const onDeleteClick = (id) => {
@@ -41,15 +20,25 @@ export default function TaskList({ taskArr, setTaskArr }) {
   return (
     <>
       {taskArr.map((task) => (
-        <StyledItem $done={task.done ? true : undefined} key={task.id}>
-          <p>{task.task}</p>
+        <li className={styles.taskListLi} key={task.id}>
+          <p className={styles.taskListParagraph}> {task.task}</p>
           <div>
             {!task.done && (
-              <button onClick={() => handleTaskDone(task.id)}>Zrobione</button>
+              <button
+                className={styles.taskListButton}
+                onClick={() => handleTaskDone(task.id)}
+              >
+                Zrobione
+              </button>
             )}
-            <button onClick={() => onDeleteClick(task.id)}>Usuń</button>
+            <button
+              className={styles.taskListButton}
+              onClick={() => onDeleteClick(task.id)}
+            >
+              Usuń
+            </button>
           </div>
-        </StyledItem>
+        </li>
       ))}
     </>
   );

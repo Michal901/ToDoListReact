@@ -1,52 +1,7 @@
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styles from "../TaskInput/TaskInput.module.css";
 import { useState } from "react";
 import { nanoid } from "nanoid";
-
-const InputContainer = styled.div`
-  /* display: flex; */
-`;
-const StyledH1 = styled.h1`
-  font-size: 2rem;
-  font-family: Arial, Helvetica, sans-serif;
-`;
-const StyledPlusBtn = styled.button`
-  padding: 5px 15px;
-  border-radius: 50%;
-  background-color: #fff;
-  cursor: pointer;
-  color: #555;
-  font-size: 40px;
-  position: absolute;
-  top: 2rem;
-  right: 1rem;
-  transition: 0.3s;
-  border: 1px solid #aaa;
-
-  &:hover {
-    background-color: #0099ffac;
-  }
-`;
-const InputWrapper = styled.div`
-  margin: 20px;
-`;
-
-const StyledInput = styled.input`
-  padding: 10px;
-  margin-right: 10px;
-`;
-
-const StyledButton = styled.button`
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-`;
-const StyledP = styled.p`
-  font-family: sans-serif;
-  margin: 10px 0 5px;
-`;
 
 export default function TaskInput({ taskArr, setTaskArr, setIsModalShown }) {
   const [inputValue, setInputValue] = useState("");
@@ -72,33 +27,40 @@ export default function TaskInput({ taskArr, setTaskArr, setIsModalShown }) {
     setInputShown((prevVal) => !prevVal);
   };
   return (
-    <InputContainer>
-      <StyledH1>Do zrobienia</StyledH1>
+    <div>
+      <h1 className={styles.taskInputMainHeader}>Do zrobienia</h1>
       {taskArr.length > 0 ? (
-        <StyledP>
+        <p className={styles.taskInputParagraph}>
           Liczba zadań: <strong>{taskArr.length}</strong>{" "}
-        </StyledP>
+        </p>
       ) : (
-        <StyledP> Brak zadań</StyledP>
+        <p className={styles.taskInputParagraph}> Brak zadań</p>
       )}
       {inputShown ? (
-        <InputWrapper>
-          <StyledInput type="text" onChange={onInputChange} />
-          <StyledButton
+        <div className={styles.taskInputInputContainer}>
+          <input
+            className={styles.taskInputMainInput}
+            type="text"
+            onChange={onInputChange}
+          />
+          <button
+            className={styles.taskInputAddButton}
             onClick={() => {
               onAddClick();
               onInputShown();
             }}
           >
             Dodaj
-          </StyledButton>
-        </InputWrapper>
+          </button>
+        </div>
       ) : (
         <div>
-          <StyledPlusBtn onClick={onInputShown}>+</StyledPlusBtn>{" "}
+          <button className={styles.taskInputPlusButton} onClick={onInputShown}>
+            +
+          </button>
         </div>
       )}
-    </InputContainer>
+    </div>
   );
 }
 TaskInput.propTypes = {

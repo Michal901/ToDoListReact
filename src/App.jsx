@@ -2,9 +2,9 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import styled from "styled-components";
 import "./App.css";
-import TaskList from "./components/TaskList";
-import TaskInput from "./components/TaskInput";
-import Modal from "./components/Modal";
+import TaskList from "./components/TaskList/TaskList";
+import TaskInput from "./components/TaskInput/TaskInput";
+import Modal from "./components/Modal/Modal";
 
 const StyledContainer = styled.div`
   display: flex;
