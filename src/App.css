@@ -5,7 +5,14 @@
   list-style: none;
 }
 html {
-  background: url("./assets/img/backgroundd.jpg");
+  /* background: url("./assets/img/backgroundd.jpg"); */
+  background: rgb(206, 240, 241);
+  background: linear-gradient(
+    111deg,
+    rgba(206, 240, 241, 1) 0%,
+    rgba(251, 187, 187, 1) 35%,
+    rgba(255, 249, 231, 1) 100%
+  );
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
