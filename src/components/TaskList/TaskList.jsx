@@ -28,14 +28,14 @@ export default function TaskList({ taskArr, setTaskArr }) {
                 className={styles.taskListButton}
                 onClick={() => handleTaskDone(task.id)}
               >
-                Zrobione
+                Done
               </button>
             )}
             <button
               className={styles.taskListButton}
               onClick={() => onDeleteClick(task.id)}
             >
-              Usuń
+              Delete
             </button>
           </div>
         </li>

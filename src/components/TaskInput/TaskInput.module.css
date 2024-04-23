@@ -6,7 +6,7 @@
 .taskInputPlusButton {
   padding: 5px 15px;
   border-radius: 50%;
-  background-color: #fff;
+  background: rgba(255, 255, 255, 0.179);
   cursor: pointer;
   color: #555;
   font-size: 40px;
@@ -14,7 +14,7 @@
   top: 2rem;
   right: 1rem;
   transition: 0.3s;
-  border: 1px solid #aaa;
+  border: 1px solid rgba(255, 255, 255, 0.57);
 }
 .taskInputPlusButton:hover {
   background-color: #0099ffac;
@@ -37,6 +37,6 @@
 }
 
 .taskInputParagraph {
-  font-family: sans-serif;
+  font-family: "Shadows Into Light", cursive;
   margin: 10px 0 5px;
 }

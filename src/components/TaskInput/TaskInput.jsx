@@ -31,10 +31,10 @@ export default function TaskInput({ taskArr, setTaskArr, setIsModalShown }) {
       <h1 className={styles.taskInputMainHeader}>Tasks</h1>
       {taskArr.length > 0 ? (
         <p className={styles.taskInputParagraph}>
-          Liczba zadań: <strong>{taskArr.length}</strong>{" "}
+          Number of tasks : <strong>{taskArr.length}</strong>{" "}
         </p>
       ) : (
-        <p className={styles.taskInputParagraph}> Brak zadań</p>
+        <p className={styles.taskInputParagraph}> No tasks</p>
       )}
       {inputShown ? (
         <div className={styles.taskInputInputContainer}>
@@ -50,7 +50,7 @@ export default function TaskInput({ taskArr, setTaskArr, setIsModalShown }) {
               onInputShown();
             }}
           >
-            Dodaj
+            Add
           </button>
         </div>
       ) : (

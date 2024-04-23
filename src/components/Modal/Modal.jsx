@@ -4,7 +4,7 @@ const Modal = ({ onClose }) => {
   return (
     <div className={styles.modalBackground}>
       <div className={styles.modalContent}>
-        <p>Wpisz jakieś zadanie.</p>
+        <p>Add some task.</p>
         <br />
         <button className={styles.closeButton} onClick={onClose}>
           Close
