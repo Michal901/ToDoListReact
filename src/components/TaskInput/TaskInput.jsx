@@ -28,7 +28,7 @@ export default function TaskInput({ taskArr, setTaskArr, setIsModalShown }) {
   };
   return (
     <div>
-      <h1 className={styles.taskInputMainHeader}>Do zrobienia</h1>
+      <h1 className={styles.taskInputMainHeader}>Tasks</h1>
       {taskArr.length > 0 ? (
         <p className={styles.taskInputParagraph}>
           Liczba zadań: <strong>{taskArr.length}</strong>{" "}
