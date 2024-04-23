@@ -8,11 +8,17 @@
 .taskListButton {
   margin-left: 10px;
   padding: 5px 10px;
-  border: none;
   border-radius: 5px;
-  cursor: pointer;
-  background-color: #007bff;
+  background: rgba(255, 255, 255, 0.179);
+  border: 1px solid rgba(255, 255, 255, 0.57);
   color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #fff;
+}
+.taskListButton:hover {
+  background-color: #ffffff;
+  color: #8e8e8e95;
 }
 .taskListParagraph {
   font-family: sans-serif;
